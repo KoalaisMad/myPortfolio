@@ -39,7 +39,7 @@ export default function Skills() {
             <motion.div initial={{ x: -12, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-4 md:mb-6">
               <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Skills & Attractions</h2>
               <div className="h-0.5 w-16 sm:w-24 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded mt-3 md:mt-4" />
-              <p className="mt-2 md:mt-3 text-xs sm:text-sm text-muted-foreground">Core tools and zones where I design, build, and ship.</p>
+              <p className="mt-2 md:mt-3 text-sm sm:text-base text-muted-foreground">Core tools and zones where I design, build, and ship.</p>
             </motion.div>
 
             {/* attractions removed — header remains */}

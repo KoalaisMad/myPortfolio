@@ -136,8 +136,8 @@ const Hero = () => {
               </div>
           </div>
           <div className="flex-1 min-w-0 flex items-center justify-center lg:ml-[-40px]">
-            <div className="w-full max-w-[90vw] sm:max-w-[320px] md:max-w-[400px] aspect-square overflow-visible flex items-center justify-center">
-              <Spline scene="https://prod.spline.design/rQLxnxI9l6038NQN/scene.splinecode" className="w-full h-full" style={{ minHeight: '220px', minWidth: '220px' }} />
+            <div className="w-full max-w-[90vw] sm:max-w-[320px] md:max-w-[400px] aspect-square overflow-visible flex items-center justify-center mx-auto">
+              <Spline scene="https://prod.spline.design/rQLxnxI9l6038NQN/scene.splinecode" className="w-full h-full" style={{ minHeight: '220px', minWidth: '220px', margin: '0 auto' }} />
             </div>
           </div>
         </div>
