@@ -8,7 +8,7 @@ const ContactPage = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -20 }}
       transition={{ duration: 0.3 }}
-      className="min-h-screen pt-16"
+      className="min-h-screen"
     >
       <Contact />
     </motion.div>

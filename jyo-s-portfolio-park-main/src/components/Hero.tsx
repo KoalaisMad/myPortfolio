@@ -43,11 +43,11 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--secondary)/0.15),transparent_50%)]" />
       </div>
       {/* Top Welcome Section (not fixed) */}
-      <div className="w-full pt-24 pb-4 z-20 flex flex-col items-center justify-center">
-        <div className="w-full flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-12 overflow-x-auto mt-6">
-          <div className="flex-1 min-w-[220px] flex flex-col items-center justify-center text-center px-2 md:px-0 md:ml-8">
+      <div className="w-full pt-20 md:pt-24 pb-4 z-20 flex flex-col items-center justify-center">
+        <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-center gap-4 md:gap-8 lg:gap-12 px-4 mt-4 md:mt-6">
+          <div className="flex-1 min-w-0 max-w-lg lg:max-w-none flex flex-col items-center justify-center text-center lg:ml-8">
             <div className="mb-2">
-              <span className="block text-6xl md:text-7xl font-extrabold text-primary drop-shadow mb-2 font-comic">Howdy!</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary drop-shadow mb-2 font-comic">Howdy!</span>
             </div>
             <div
               className="w-full"
@@ -65,13 +65,13 @@ const Hero = () => {
                 }
               }}
             >
-             <TypingText className="text-lg md:text-xl mb-4 text-muted-foreground max-w-3xl mx-auto font-comic">
+             <TypingText className="text-base sm:text-lg md:text-xl mb-4 text-muted-foreground max-w-md lg:max-w-3xl mx-auto font-comic px-2">
   {"I'm Jyo and here is my friend Kyro!\nHe'll guide you through my LALA Land!"}
 </TypingText>
 
 
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full max-w-md sm:max-w-none">
               <Button
                 size="lg"
                 onClick={goToProjects}
@@ -88,7 +88,7 @@ const Hero = () => {
                     splineRef.current.emitEvent('mouseLeave');
                   }
                 }}
-                className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-primary-glow hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
+                className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 bg-gradient-to-r from-primary to-primary-glow hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all w-full sm:w-auto"
               >
                 View Projects 🎟️
               </Button>
@@ -109,35 +109,35 @@ const Hero = () => {
                     splineRef.current.emitEvent('mouseLeave');
                   }
                 }}
-                className="text-lg px-8 py-6 bg-gradient-to-r from-secondary to-[hsl(25_88%_70%)] hover:shadow-[0_0_30px_hsl(var(--secondary)/0.5)] transition-all"
+                className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 bg-gradient-to-r from-secondary to-[hsl(25_88%_70%)] hover:shadow-[0_0_30px_hsl(var(--secondary)/0.5)] transition-all w-full sm:w-auto"
               >
                 Contact Me 🎟️
               </Button>
             </div>
-            <div className="flex gap-4 mt-6 justify-center items-center w-full">
+            <div className="flex gap-3 sm:gap-4 mt-4 sm:mt-6 justify-center items-center w-full">
                 <a
-                  href="www.linkedin.com/in/jyoshitha-madhavarapu"
+                  href="https://www.linkedin.com/in/jyoshitha-madhavarapu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-blue-700 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900"
+                  className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg transition-colors text-blue-700 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900"
                 >
                   <Linkedin className="w-5 h-5" />
-                  <span className="font-semibold"></span>
+                  <span className="font-semibold hidden sm:inline">LinkedIn</span>
                 </a>
                 <a
                   href="https://github.com/KoalaisMad"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg transition-colors text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
                   <Github className="w-5 h-5" />
-                  <span className="font-semibold"></span>
+                  <span className="font-semibold hidden sm:inline">GitHub</span>
                 </a>
               </div>
           </div>
-          <div className="flex-1 min-w-[400px] flex items-center justify-center md:ml-[-40px]">
-            <div style={{ margin: '0 auto', width: '400px', height: '400px', overflow: 'visible', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Spline scene="https://prod.spline.design/rQLxnxI9l6038NQN/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+          <div className="flex-1 min-w-0 flex items-center justify-center lg:ml-[-40px]">
+            <div className="w-full max-w-[90vw] sm:max-w-[320px] md:max-w-[400px] aspect-square overflow-visible flex items-center justify-center">
+              <Spline scene="https://prod.spline.design/rQLxnxI9l6038NQN/scene.splinecode" className="w-full h-full" style={{ minHeight: '220px', minWidth: '220px' }} />
             </div>
           </div>
         </div>
@@ -175,24 +175,24 @@ const Hero = () => {
         <div className="h-16" />
       </div>
       {/* Welcome to LALA Land Board (after page break) */}
-      <div className="w-full flex justify-center items-center py-16">
+      <div className="w-full flex justify-center items-center py-8 md:py-16 px-4">
         <motion.div
-          className="relative bg-gradient-to-r from-pink-200 via-yellow-100 to-blue-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-3xl shadow-2xl border-4 border-white dark:border-gray-700 px-8 py-10 max-w-2xl mx-auto text-center"
+          className="relative bg-gradient-to-r from-pink-200 via-yellow-100 to-blue-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-2xl md:rounded-3xl shadow-2xl border-2 md:border-4 border-white dark:border-gray-700 px-4 sm:px-6 md:px-8 py-6 md:py-10 max-w-sm sm:max-w-lg md:max-w-2xl mx-auto text-center"
           animate={{ scale: [1, 1.03, 1] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
           {/* Lights */}
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex gap-2">
-            {[...Array(10)].map((_, i) => (
-              <span key={i} className={`inline-block w-4 h-4 rounded-full shadow-lg ${i % 2 === 0 ? 'bg-pink-400' : 'bg-yellow-300'} animate-pulse`} style={{ animationDelay: `${i * 0.2}s` }} />
+          <div className="absolute -top-4 md:-top-6 left-1/2 -translate-x-1/2 flex gap-1 md:gap-2">
+            {[...Array(8)].map((_, i) => (
+              <span key={i} className={`inline-block w-2 h-2 md:w-4 md:h-4 rounded-full shadow-lg ${i % 2 === 0 ? 'bg-pink-400' : 'bg-yellow-300'} animate-pulse`} style={{ animationDelay: `${i * 0.2}s` }} />
             ))}
           </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-black dark:text-white drop-shadow mb-4 font-comic">Welcome to LALA Land!</h2>
-          <p className="text-lg md:text-xl text-muted-foreground font-comic">Enjoy the ride, explore the park, and let Kyro guide you!</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold text-black dark:text-white drop-shadow mb-2 md:mb-4 font-comic">Welcome to LALA Land!</h2>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-comic">Enjoy the ride, explore the park, and let Kyro guide you!</p>
           {/* Bottom lights */}
-          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-            {[...Array(10)].map((_, i) => (
-              <span key={i} className={`inline-block w-4 h-4 rounded-full shadow-lg ${i % 2 === 0 ? 'bg-blue-400' : 'bg-yellow-300'} animate-pulse`} style={{ animationDelay: `${i * 0.2}s` }} />
+          <div className="absolute -bottom-4 md:-bottom-6 left-1/2 -translate-x-1/2 flex gap-1 md:gap-2">
+            {[...Array(8)].map((_, i) => (
+              <span key={i} className={`inline-block w-2 h-2 md:w-4 md:h-4 rounded-full shadow-lg ${i % 2 === 0 ? 'bg-blue-400' : 'bg-yellow-300'} animate-pulse`} style={{ animationDelay: `${i * 0.2}s` }} />
             ))}
           </div>
         </motion.div>

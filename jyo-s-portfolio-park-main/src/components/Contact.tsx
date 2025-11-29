@@ -87,18 +87,18 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-background via-secondary/10 to-primary/10 dark:from-background dark:via-secondary/20 dark:to-primary/20 overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
+    <section className="relative py-12 md:py-20 bg-gradient-to-b from-background via-secondary/10 to-primary/10 dark:from-background dark:via-secondary/20 dark:to-primary/20 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-gray-100 mb-4">📬 Contact Me</h2>
-          <div className="max-w-2xl mx-auto bg-white/80 dark:bg-background/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-blue-200 dark:border-primary/20">
-            <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-gray-100 mb-2 md:mb-4">📬 Contact Me</h2>
+          <div className="max-w-xl sm:max-w-2xl mx-auto bg-white/80 dark:bg-background/80 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 shadow-lg border border-blue-200 dark:border-primary/20">
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-200 leading-relaxed">
               If you want to contact me, feel free to email me at{' '}
               <a href="mailto:madhavarapu.jyo@gmail.com" className="text-primary font-semibold hover:underline dark:text-primary/80">
                 madhavarapu.jyo@gmail.com
@@ -110,7 +110,7 @@ export default function ContactForm() {
               . For your convenience, you can also send me a message right here!
             </p>
             {/* Social Links below contact info */}
-            <div className="flex gap-4 mt-6 justify-center items-center">
+            <div className="flex gap-2 sm:gap-4 mt-4 sm:mt-6 justify-center items-center">
               <a
                 href="https://www.linkedin.com/in/jyoshitha-madhavarapu/"
                 target="_blank"
@@ -138,9 +138,9 @@ export default function ContactForm() {
           whileInView={{ y: 0, opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl mx-auto"
+          className="max-w-xl sm:max-w-2xl mx-auto"
         >
-          <div className="bg-white dark:bg-background rounded-3xl p-8 shadow-2xl border-4 border-white dark:border-primary/20">
+          <div className="bg-white dark:bg-background rounded-xl md:rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl border border-white dark:border-primary/20">
             {isSubmitted ? (
               <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="text-center py-12">
                 <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-4" />
@@ -148,7 +148,7 @@ export default function ContactForm() {
                 <p className="text-gray-600 dark:text-gray-300">I'll get back to you soon!</p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div>
                   <Label htmlFor="name" className="text-gray-700 dark:text-gray-200 font-semibold">Name *</Label>
                   <Input id="name" value={formData.name} onChange={(e) => handleChange('name', e.target.value)} className={`mt-2 ${errors.name ? 'border-red-500' : ''}`} placeholder="Your name" />
@@ -177,7 +177,7 @@ export default function ContactForm() {
                   <Button 
                     type="submit" 
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-lg py-6 rounded-2xl shadow-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-base sm:text-lg py-4 sm:py-6 rounded-xl sm:rounded-2xl shadow-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5 mr-2" />
                     {isSubmitting ? 'Sending...' : 'Send Message'}

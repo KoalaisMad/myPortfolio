@@ -25,16 +25,16 @@ const About = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+    <section className="py-12 md:py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             Park Map
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-6 md:mb-8">
             Explore the attractions of my journey ✨
           </p>
-          <p className="text-lg text-foreground/80 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-foreground/80 max-w-4xl mx-auto leading-relaxed px-2">
             Jyo (Jyoshitha Madhavarapu) is a Computer Science student at Texas A&M University passionate about 
             applied machine learning, intelligent systems, and building real-world products from scratch. She blends 
             engineering creativity with practical problem-solving—especially when it comes to safety, data-driven tools, 
@@ -42,20 +42,20 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
           {attractions.map((attraction, index) => (
             <Card
               key={index}
-              className="p-8 hover:shadow-[0_8px_30px_hsl(var(--primary)/0.15)] transition-all duration-300 hover:-translate-y-2 border-2"
+              className="p-4 sm:p-6 md:p-8 hover:shadow-[0_8px_30px_hsl(var(--primary)/0.15)] transition-all duration-300 hover:-translate-y-2 border-2"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-5xl mb-4 animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div className="text-3xl sm:text-4xl md:text-5xl mb-3 md:mb-4 animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
                 {attraction.emoji}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-primary">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 md:mb-4 text-primary">
                 {attraction.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {attraction.description}
               </p>
             </Card>

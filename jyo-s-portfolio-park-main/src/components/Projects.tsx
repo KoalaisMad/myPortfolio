@@ -61,16 +61,16 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="pt-32 pb-24 min-h-screen relative bg-background dark:bg-background">
+    <section id="projects" className="pt-24 md:pt-32 pb-12 md:pb-24 min-h-screen relative bg-background dark:bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-4">
+        <div className="text-center mb-8 md:mb-16">
           <div className="flex flex-col items-center">
-            <h2 className="text-5xl md:text-6xl font-extrabold mb-4 text-primary drop-shadow-sm">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 text-primary drop-shadow-sm">
               🎢 Project Carousel Ride
             </h2>
-            <span className="block w-2/3 h-1 rounded-full bg-primary/30 mb-8"></span>
+            <span className="block w-2/3 h-1 rounded-full bg-primary/30 mb-6 md:mb-8"></span>
           </div>
-          <p className="text-xl text-muted-foreground mb-16">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-16">
             Take a ride through my creations
           </p>
         </div>
@@ -85,32 +85,32 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Floating3DCard>
-                <Card className="p-8 hover:scale-[1.03] hover:shadow-[0_16px_48px_hsl(var(--pink-500)/0.25)] transition-all duration-300 border border-pink-300 bg-white/80 dark:bg-background/80 backdrop-blur-md">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <Card className="p-4 sm:p-6 md:p-8 hover:scale-[1.03] hover:shadow-[0_16px_48px_hsl(var(--pink-500)/0.25)] transition-all duration-300 border border-pink-300 bg-white/80 dark:bg-background/80 backdrop-blur-md">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                 <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">{project.emoji}</span>
-                    <h3 className="text-3xl font-bold">{project.title}</h3>
+                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                    <span className="text-2xl sm:text-3xl">{project.emoji}</span>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">{project.title}</h3>
                   </div>
-                  <p className="text-xl text-secondary font-semibold mb-4">
+                  <p className="text-base sm:text-lg md:text-xl text-secondary font-semibold mb-3 sm:mb-4">
                     {project.subtitle}
                   </p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                     {project.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6">
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-primary/10 text-primary shadow-sm border border-primary/20"
+                        className="inline-flex items-center px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-primary/10 text-primary shadow-sm border border-primary/20"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                     {project.link && (
                       <a
                         href={project.link}
@@ -119,7 +119,7 @@ const Projects = () => {
                         tabIndex={0}
                         aria-label={`Visit ${project.title} site`}
                       >
-                        <Button className="gap-2 bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 text-white border-2 border-pink-300 hover:from-pink-500 hover:to-pink-400 hover:border-pink-500">
+                        <Button className="gap-2 bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 text-white border-2 border-pink-300 hover:from-pink-500 hover:to-pink-400 hover:border-pink-500 w-full sm:w-auto text-sm">
                           <ExternalLink className="w-4 h-4" />
                           Visit Site
                         </Button>
@@ -133,7 +133,7 @@ const Projects = () => {
                         tabIndex={0}
                         aria-label={`View ${project.title} code on GitHub`}
                       >
-                        <Button variant="outline" className="gap-2 border-2 border-pink-300 text-pink-600 hover:border-pink-500 hover:text-pink-500">
+                        <Button variant="outline" className="gap-2 border-2 border-pink-300 text-pink-600 hover:border-pink-500 hover:text-pink-500 w-full sm:w-auto text-sm">
                           <Github className="w-4 h-4" />
                           View Code
                         </Button>
