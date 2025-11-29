@@ -37,7 +37,7 @@ const Navigation = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-transparent"
+      className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
@@ -45,6 +45,9 @@ const Navigation = () => {
           <Link
             to="/"
             className="text-xl md:text-2xl font-bold text-black dark:text-white hover:text-primary transition-colors"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           >
             ᥫ᭡ Jyo's LAND
           </Link>
@@ -77,8 +80,9 @@ const Navigation = () => {
             })}
             {/* Resume */}
             <a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/file/d/1A6C7xwdkJZmOb5NDYPmeiCKt2Yw5g5f2/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-2 rounded-lg text-black dark:text-white font-semibold bg-transparent hover:bg-transparent transition-all"
             >
               <FileText className="w-4 h-4" />
@@ -127,8 +131,9 @@ const Navigation = () => {
                 </Link>
               ))}
               <a
-                href="/resume.pdf"
-                download
+                href="https://drive.google.com/file/d/1A6C7xwdkJZmOb5NDYPmeiCKt2Yw5g5f2/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-white/15 transition-colors font-semibold"
               >

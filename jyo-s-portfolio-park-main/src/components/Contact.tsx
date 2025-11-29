@@ -99,16 +99,17 @@ export default function ContactForm() {
           <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-gray-100 mb-2 md:mb-4">📬 Contact Me</h2>
           <div className="max-w-xl sm:max-w-2xl mx-auto bg-white/80 dark:bg-background/80 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 shadow-lg border border-blue-200 dark:border-primary/20">
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-200 leading-relaxed">
-              If you want to contact me, feel free to email me at{' '}
-              <a href="mailto:madhavarapu.jyo@gmail.com" className="text-primary font-semibold hover:underline dark:text-primary/80">
-                madhavarapu.jyo@gmail.com
-              </a>{' '}
-              or message me on{' '}
-              <a href="https://www.linkedin.com/in/jyoshitha-madhavarapu/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline dark:text-primary/80">
-                LinkedIn
-              </a>
-              . For your convenience, you can also send me a message right here!
-            </p>
+  Want to chat? You can always drop a message into my inbox at{" "}
+  <a href="mailto:madhavarapu.jyo@gmail.com" className="text-primary font-semibold hover:underline dark:text-primary/80">
+    madhavarapu.jyo@gmail.com
+  </a>{" "}
+  or swing by my{" "}
+  <a href="https://www.linkedin.com/in/jyoshitha-madhavarapu/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline dark:text-primary/80">
+    LinkedIn
+  </a>
+  . Or, if you're feeling adventurous, send me a message right here - Kyro and I are listening! 
+</p>
+
             {/* Social Links below contact info */}
             <div className="flex gap-2 sm:gap-4 mt-4 sm:mt-6 justify-center items-center">
               <a
